@@ -16,11 +16,25 @@ $form.addEventListener('submit', async e => {
       $songTemplate = ``,
       artistAPIURL = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist.toLowerCase()}`,
       songAPIURL = `https://api.lyrics.ovh/v1/${artist.toLowerCase()}/${song.toLowerCase()}`,
-      artistRes = await fetch(artistAPIURL),
+      artistFetch = fetch(artistAPIURL),
+      songFetch = fetch(songAPIURL),
+      [artistRes, songRes] = await Promise.all([artistFetch, songFetch]),
       artistData = await artistRes.json(),
-      songRes = await fetch(songAPIURL),
       songData = await songRes.json()
-    console.log(artistData, songData)
+    let artistResult = artistData?.artists[0]
+    if (!artistResult || songData.error) throw { error: 'Ocurrió un error' }
+    console.log(artistResult, songData)
+    $artistTemplate = `
+      <h2>${artistResult?.strArtist}</h2>
+      <img src="${artistResult.strArtistThumb}" alt="${artistResult.strArtist}">
+      <p>${artistResult.strBiographyES}</p>
+    `
+    $songTemplate = `
+    <h2>Letra de la canción</h2>
+    <blockquote>${songData.lyrics}</blockquote>
+    `
+    $artist.innerHTML = $artistTemplate
+    $song.innerHTML = $songTemplate
   } catch (error) {
     console.log(error)
     let message = error.statusText || 'Ocurrió un error'

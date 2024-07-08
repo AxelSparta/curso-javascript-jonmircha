@@ -7,8 +7,10 @@ h1, h2 {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .song-search-form {
@@ -53,6 +55,10 @@ input[type="submit"]:hover {
   display: none;
 }
 
+.song blockquote{
+  white-space: pre-wrap;
+  text-align: center;
+}
 main {
   display: flex;
   flex-direction: column-reverse;
