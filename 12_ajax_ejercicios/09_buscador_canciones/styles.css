@@ -1,0 +1,70 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.song-search-form {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.input-search {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid black;
+
+}
+
+input[type="submit"] {
+  display: block;
+  margin: auto;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(66, 66, 66);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+.error {
+  text-align: center;
+  color: red;
+  display: none;
+}
+
+.loader {
+  margin: 1rem auto;
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    flex-direction: row;
+  }
+
+  main > * {
+    flex-basis: 50%;
+    padding: 1rem;
+  }
+}

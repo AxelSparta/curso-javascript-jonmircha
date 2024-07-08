@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemons</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/pokemon-icon.png"
+      type="image/x-icon"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3cec4091c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 class="title">
+      <img src="./assets/Logo-Pokemon.png" class="title__img" alt="Pokémon" />
+    </h1>
+    <main class="container">
+      <nav class="nav">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          class="nav__search"
+          placeholder="🔎Search..."
+        />
+        <div class="nav__links"></div>
+      </nav>
+      <section class="pokemons"></section>
+    </main>
+    <footer class="footer">
+      <section class="footer-links">
+        <a
+          href="https://github.com/AxelSparta"
+          target="_blank"
+          class="footer__link"
+        >
+          <img src="assets/github.svg" alt="github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/axel-sparta-web/"
+          target="_blank"
+          class="footer__link"
+        >
+          <img src="assets/linkedin.svg" alt="linkedin" />
+        </a>
+      </section>
+      <section>
+        <p class="text-white">
+          Built by
+          <a
+            href="https://axelsparta.netlify.app/"
+            target="_blank"
+            rel="noopener"
+            >Axel Sparta</a
+          >
+        </p>
+      </section>
+    </footer>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/sneakers.png" />
+    <title>Sneakers shop</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Checkout con stripe</h1>
+    </header>
+
+    <main>
+      <section id="sneakers" class="sneakers-container">
+        <div id="loader">
+          <img src="assets/svg-loaders/puff.svg" alt="loader" />
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./src/stripe-checkout.js" type="module"></script>
+  </body>
+</html>

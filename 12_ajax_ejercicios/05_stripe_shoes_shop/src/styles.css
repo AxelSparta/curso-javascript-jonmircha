@@ -1,0 +1,69 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #2c3e5085;
+  display: flex;
+  justify-content: center;
+}
+.loading img {
+  width: 5rem;
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.sneakers-container {
+  width: 90%;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.sneaker {
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 270px;
+  text-align: center;
+  box-shadow: 6px 8px 22px -3px #bababa;
+}
+
+.sneaker figcaption span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sneaker-img {
+  max-width: 100%;
+}
+
+.sneaker-btn {
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  border: 2px solid #2c3e50;
+  background-color: #2c3e50;
+  margin-top: 1rem;
+}
+.sneaker-btn:hover {
+  background-color: #34495e;
+  color: white;
+}

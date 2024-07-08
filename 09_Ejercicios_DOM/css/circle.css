@@ -1,0 +1,13 @@
+.stage {
+  display: flex;
+  min-height: 50vh;
+  background-color: var(--dark-color);
+}
+.ball {
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  background-color: var(--light-color);
+  border-radius: 50%;
+  /* transition: ease 0.25s; */
+}

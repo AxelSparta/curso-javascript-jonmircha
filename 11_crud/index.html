@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Crud con ajax</h1>
+    </header>
+    <section class="crud">
+      <article>
+        <h2 class="crud-title">Create user</h2>
+        <form id="crud-form" class="crud-form" style="max-width: 300px">
+          <fieldset>
+            <legend>Name</legend>
+            <input type="text" name="name" placeholder="name" required />
+          </fieldset>
+          <fieldset>
+            <legend>Username</legend>
+            <input
+              type="text"
+              name="username"
+              placeholder="username"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Email</legend>
+            <input type="email" name="email" placeholder="email" required />
+          </fieldset>
+          <fieldset>
+            <legend>Phone number</legend>
+            <input type="number" name="phone" placeholder="phone" required />
+          </fieldset>
+          <input type="submit" value="Enviar" />
+          <input type="hidden" name="id" />
+        </form>
+      </article>
+      <article>
+        <table class="crud-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </section>
+    <template id="crud-template">
+      <tr>
+        <td class="name"></td>
+        <td class="username"></td>
+        <td class="email"></td>
+        <td class="phone"></td>
+        <td>
+          <button class="edit">Editar</button>
+          <button class="delete">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+
+    <!-- <script src="00_xhrCRUD.js"></script> -->
+    <!-- <script src="01_fetchCRUD.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="02_axiosCRUD.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.online,
+.offline {
+  position: sticky;
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  top: 0;
+  z-index: 1000;
+}
+.offline {
+  background-color: red;
+}

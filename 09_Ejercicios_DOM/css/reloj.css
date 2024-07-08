@@ -1,0 +1,15 @@
+#reloj {
+    margin: 1rem 0;
+}
+
+.reloj-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.reloj-buttons button {
+    margin: .5rem;
+}
+
+
+

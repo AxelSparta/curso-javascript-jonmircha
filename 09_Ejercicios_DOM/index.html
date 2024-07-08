@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios DOM</title>
+    <!-- HAMBURGER -->
+    <link rel="stylesheet" href="./dist/hamburgers.css" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/reloj.css" />
+    <link rel="stylesheet" href="./css/circle.css" />
+    <link rel="stylesheet" href="./css/networkMessage.css" />
+    <link rel="stylesheet" href="./css/searchFilter.css" />
+    <link rel="stylesheet" href="./css/responsive_slider.css" />
+    <link rel="stylesheet" href="./css/formValidation.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body data-theme>
+    <header class="header">
+      <h1 class="title">Ejercicios DOM</h1>
+    </header>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#section-1" class="nav-link" data-scroll-spy
+            >Reloj digital y alarma sonora</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-2" class="nav-link" data-scroll-spy
+            >Eventos con el teclado</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-3" class="nav-link" data-scroll-spy>Countdown</a>
+        </li>
+        <li class="nav-item">
+          <a href="#section-4" class="nav-link" data-scroll-spy
+            >Responsive con javascript</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-5" class="nav-link" data-scroll-spy
+            >Responsive Tester</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-6" class="nav-link" data-scroll-spy
+            >Deteccion de dispositivos con user agent</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-7" class="nav-link" data-scroll-spy
+            >Deteccion de la cámara web</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-8" class="nav-link" data-scroll-spy
+            >Geolocalización</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-9" class="nav-link" data-scroll-spy
+            >Filtro de búsqueda</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-10" class="nav-link" data-scroll-spy>Sorteo</a>
+        </li>
+        <li class="nav-item">
+          <a href="#section-11" class="nav-link" data-scroll-spy
+            >Responsive slider</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-12" class="nav-link" data-scroll-spy
+            >Video inteligente</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-13" class="nav-link" data-scroll-spy
+            >Validaciones de formulario</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#section-14" class="nav-link" data-scroll-spy
+            >Lector de texto</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button id="toggle-btn" class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <button id="top-btn">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <main class="container">
+      <section id="section-1" data-scroll-spy class="section">
+        <h1>Reloj digital y alarma sonora</h1>
+        <div class="reloj-container">
+          <h2 id="reloj"></h2>
+          <div class="reloj-buttons">
+            <button id="start-reloj-btn" class="btn">Iniciar reloj</button>
+            <button id="stop-reloj-btn" class="btn">Detener reloj</button>
+            <button id="start-alarma-btn" class="btn">Iniciar alarma</button>
+            <button id="stop-alarma-btn" class="btn">Detener alarma</button>
+          </div>
+        </div>
+      </section>
+      <section id="section-2" data-scroll-spy class="section">
+        <h1>Eventos con el teclado</h1>
+        <div class="stage">
+          <div class="ball"></div>
+        </div>
+      </section>
+      <section id="section-3" data-scroll-spy class="section">
+        <h1>Countdown</h1>
+        <label for="date">Ingresar una fecha futura</label>
+        <input type="date" name="date" id="date" />
+        <h2 id="countdown"></h2>
+      </section>
+      <section id="section-4" data-scroll-spy class="section">
+        <h1>Responsive con javascript</h1>
+        <div id="video-yt"></div>
+        <div id="gmaps"></div>
+      </section>
+      <section id="section-5" data-scroll-spy class="section">
+        <h1>Responsive tester</h1>
+        <form id="responsive-tester-form">
+          <input name="link" type="url" placeholder="link" />
+          <input name="width" type="text" placeholder="width" />
+          <input name="height" type="text" placeholder="height" />
+          <button type="submit">Testear</button>
+          <input type="button" name="closeWindow" value="Close" />
+        </form>
+      </section>
+      <section class="section" id="section-6" data-scroll-spy>
+        <h1>Deteccion de dispositivos con user agent</h1>
+        <div id="user-device"></div>
+      </section>
+      <section class="section" id="section-7" data-scroll-spy>
+        <h1>Detección de la cámara web</h1>
+        <div id="webcam-container"></div>
+      </section>
+      <section class="section" id="section-8" data-scroll-spy>
+        <h1>Geolocalización</h1>
+        <div id="geolocation"></div>
+      </section>
+      <section class="section" id="section-9" data-scroll-spy>
+        <h1>Filtro de búsqueda</h1>
+        <input type="search" class="card-filter" placeholder="Buscar..." />
+        <article class="cards">
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+            <figcaption>Nature</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/animals" alt="Animal" />
+            <figcaption>Animal</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+            <figcaption>Tech</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/any" alt="Any" />
+            <figcaption>Any</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/people" alt="People" />
+            <figcaption>People</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/arch" alt="Architecture" />
+            <figcaption>Architecture</figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="section" id="section-10" data-scroll-spy>
+        <h1>Sorteo</h1>
+        <ul>
+          <li id="lottery-item">PHP</li>
+          <li id="lottery-item">PYTHON</li>
+          <li id="lottery-item">JAVA</li>
+          <li id="lottery-item">C++</li>
+          <li id="lottery-item">C#</li>
+          <li id="lottery-item">C</li>
+        </ul>
+        <button id="lotteryBtn">Sortear</button>
+      </section>
+      <section class="section" id="section-11" data-scroll-spy>
+        <h1>Responsive Slider</h1>
+        <div class="slider">
+          <div class="slider-slides">
+            <div class="slider-slide active">
+              <img src="https://placeimg.com/400/400/animals" alt="animals" />
+            </div>
+            <div class="slider-slide">
+              <h4>Diapositiva 2</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                ratione quaerat commodi, necessitatibus praesentium perspiciatis
+                doloremque id mollitia unde vitae est? Est ratione consectetur
+                molestiae iusto commodi animi fuga magnam!
+              </p>
+            </div>
+            <div class="slider-slide">
+              <img src="https://placeimg.com/400/400/tech" alt="tech" />
+            </div>
+            <div class="slider-slide">
+              <h4>Diapositiva 4</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                ratione quaerat commodi, necessitatibus praesentium perspiciatis
+                doloremque id mollitia unde vitae est? Est ratione consectetur
+                molestiae iusto commodi animi fuga magnam!
+              </p>
+            </div>
+          </div>
+          <div class="slider-btns">
+            <a class="prev" href="#">&laquo;</a>
+            <a class="next" href="#">&raquo;</a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-12" data-scroll-spy>
+        <h1>Video inteligente</h1>
+        <video
+          src="./assets/video_inteligente.webm"
+          controls
+          muted
+          loop
+          data-smart-video
+          autoplay
+        ></video>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <video
+          src="./assets/video_inteligente.webm"
+          controls
+          muted
+          loop
+          data-smart-video
+          autoplay
+        ></video>
+      </section>
+      <section class="section" id="section-13" data-scroll-spy>
+        <h1>Validaciones de formulario</h1>
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/c45bb2130391b54e3dcda3d2d8d6f084"
+          method="post"
+          target="_blank"
+        >
+          <legend class="contact-form-legend">Envíanos tus comentarios</legend>
+          <input
+            type="text"
+            name="name"
+            placeholder="Escribe tu nombre..."
+            title="El nombre sólo acepta letras y espacios en blanco"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Escribe tu email..."
+            title="Email incorrecto"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Asunto a tratar..."
+            required
+            title="El asunto es requerido"
+          />
+          <textarea
+            name="comments"
+            cols="50"
+            rows="5"
+            placeholder="Escribe tus comentarios..."
+            title="El comentario es requerido"
+            data-pattern="^.{1,255}$"
+            required
+          ></textarea>
+
+          <input type="submit" value="Enviar" />
+          <div class="contact-form-loader none">
+            <img src="./assets/svg-loaders/oval.svg" alt="Cargando..." />
+          </div>
+
+          <div class="contact-form-response none">
+            <p>Los datos han sido enviados</p>
+          </div>
+        </form>
+      </section>
+      <section class="section" id="section-14" data-scroll-spy>
+        <h1>Lector de voz</h1>
+        <form id="narrador-form">
+          <select id="speech-select">
+            <option value="">--Elige una voz--</option>
+          </select>
+          <br /><br />
+          <textarea
+            id="speech-text"
+            cols="50"
+            rows="5"
+            placeholder="Ingresa el texto para leer..."
+          ></textarea>
+          <br /><br />
+          <button id="speech-btn">Leer texto</button>
+        </form>
+      </section>
+    </main>
+    <button id="theme-toggle-btn">🌙</button>
+    <!-- CUSTOM JS -->
+    <script src="./js/app.js" type="module"></script>
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/3cec4091c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

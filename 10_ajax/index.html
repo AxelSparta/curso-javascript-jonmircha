@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX: Asynchronous Javascript and XML</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>AJAX: Asynchronous Javascript and XML</h1>
+        <p>
+          Es un conjunto de tecnologías que nos sirven para hacer peticiones
+          asíncronas y renderizar nuestra página sin necesidad de recargarla
+        </p>
+        <ul>
+          <li>HTML y CSS, para crear una presentación basada en estándares.</li>
+          <li>
+            DOM, para la interacción y manipulación dinámica de la presentación.
+          </li>
+          <li>
+            HTML, XML y JSON, para el intercambio y la manipulación de
+            información.
+          </li>
+          <li>
+            XMLHttpRequest o Fetch, para el intercambio asíncrono de
+            información.
+          </li>
+          <li>JavaScript, para unir todas las demás tecnologías.</li>
+        </ul>
+      </header>
+      <section>
+        <h2>XHR</h2>
+        <ol id="xhr"></ol>
+      </section>
+      <section>
+        <h2>FETCH</h2>
+        <ol id="fetch"></ol>
+      </section>
+      <section>
+        <h2>FETCH async-await</h2>
+        <ol id="fetchasyncawait"></ol>
+      </section>
+      <section>
+        <h2>Axios</h2>
+        <ol id="axios"></ol>
+      </section>
+    </main>
+
+    <script src="00_xhr.js"></script>
+    <script src="01_fetch.js"></script>
+    <script src="02_fetch_async_await.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="03_axios.js"></script>
+  </body>
+</html>
