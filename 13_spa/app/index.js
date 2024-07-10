@@ -1,3 +1,4 @@
+// index.js archivo principal de la aplicación
 import { App } from './App.js'
 import wp_api from './helpers/wp_api.js'
 

@@ -41,9 +41,9 @@ console.log(verdadero, falso, v, f)
 console.log(typeof verdadero, typeof falso)
 console.log(Boolean(0))
 console.log(Boolean(-7))
-console.log(Boolean('')) // evaluamos el espacio y es un valro falsy al igual que el 0
+console.log(Boolean(''))
 console.log(Boolean(' '))
-// Valores verdaderos:
+// Valores verdaderos (thruty):
 console.log(Boolean(true))
 console.log(Boolean({}))
 console.log(Boolean([]))

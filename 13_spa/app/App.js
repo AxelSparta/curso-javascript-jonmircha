@@ -1,3 +1,4 @@
+// Componente padre de toda la app
 import { Loader } from './components/Loader.js'
 import { Header } from './components/Header.js'
 import { Main } from './components/Main.js'
