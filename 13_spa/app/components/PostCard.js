@@ -2,8 +2,7 @@ export function PostCard (props) {
   const { title, date, slug, _embedded, id } = props
   const urlPoster =
     _embedded['wp:featuredmedia'][0].source_url || 'app/assets/casa.png'
-
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', e => {
     if (!e.target.matches('.post-card a')) return false
     localStorage.setItem('wpPostId', e.target.dataset.id)
   })
@@ -13,7 +12,9 @@ export function PostCard (props) {
             <img src="${urlPoster}" alt="${title.rendered}" />
             <h2>${title.rendered}</h2>
             <p>
-                <time datetime="${date}">${date.toLocaleString()}</time>
+                <time datetime="${date}">${new Date(
+    date
+  ).toLocaleDateString()}</time>
                 <a href="#/${slug}" data-id="${id}">Ver publicación</a>
             </p>
         </article>

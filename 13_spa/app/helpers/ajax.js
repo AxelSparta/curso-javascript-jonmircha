@@ -5,7 +5,7 @@ export const ajax = async props => {
     .then(json => cbSuccess(json))
     .catch(err => {
       let message = err.statusText ?? 'Ocurrió un error al acceder a la API'
-      document.getElementById('posts').innerHTML = `
+      document.querySelector('main').innerHTML = `
             <div class="error">
                 <p>Error: ${err.status ?? 404}: ${message}</p>
             </div>

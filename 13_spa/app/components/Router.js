@@ -5,19 +5,18 @@ import { Post } from './Post.js'
 import { SearchCard } from './SearchCard.js'
 
 export async function Router () {
-  const d = document
-  const w = window
-  const $main = d.getElementById('main')
+  const d = document,
+    $main = d.getElementById('main')
 
   const { hash } = location
   $main.innerHTML = null
   if (!hash || hash === '#/') {
     await ajax({
       url: api.POSTS,
-      cbSuccess: (posts) => {
+      cbSuccess: posts => {
         // console.log(posts);
         let html = ''
-        posts.forEach((post) => (html += PostCard(post)))
+        posts.forEach(post => (html += PostCard(post)))
         $main.innerHTML = html
       }
     })
@@ -30,7 +29,7 @@ export async function Router () {
 
     await ajax({
       url: `${api.SEARCH}${query}`,
-      cbSuccess: (search) => {
+      cbSuccess: search => {
         console.log(search)
         let html = ''
         if (search.length === 0) {
@@ -38,7 +37,7 @@ export async function Router () {
               <p class="error">No se han encontrado resultados para el término <mark>${query}</mark></p>
             `
         } else {
-          search.forEach((post) => {
+          search.forEach(post => {
             html += SearchCard(post)
           })
         }
@@ -50,7 +49,7 @@ export async function Router () {
   } else {
     await ajax({
       url: `${api.POST}/${localStorage.getItem('wpPostId')}`,
-      cbSuccess: (post) => {
+      cbSuccess: post => {
         console.log(post)
         $main.innerHTML = Post(post)
       }
